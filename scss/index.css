@@ -1,0 +1,129 @@
+body {
+  width: 80%;
+  margin: 10em auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 5em;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card {
+  margin: auto;
+  width: 300px;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px rgba(22, 31, 39, 0.42);
+          box-shadow: 0 0 5px rgba(22, 31, 39, 0.42);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card__one:hover {
+  -webkit-transform: perspective(30em) rotateX(18deg);
+          transform: perspective(30em) rotateX(18deg);
+  -webkit-box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px, rgba(22, 31, 39, 0.42) 0px 30px 163px -25px;
+          box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px, rgba(22, 31, 39, 0.42) 0px 30px 163px -25px;
+}
+
+.card__two:hover {
+  -webkit-transform: perspective(30em) rotateY(18deg);
+          transform: perspective(30em) rotateY(18deg);
+  -webkit-box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.2);
+}
+
+.card__three {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: coral;
+}
+
+.card__three:hover {
+  -webkit-box-shadow: 0em 0em 6em -2em rgba(0, 0, 0, 0.5), 0em 0em 3.5em -2.5em rgba(0, 0, 0, 0.5);
+          box-shadow: 0em 0em 6em -2em rgba(0, 0, 0, 0.5), 0em 0em 3.5em -2.5em rgba(0, 0, 0, 0.5);
+  -webkit-transform: perspective(800px) translateZ(10px);
+          transform: perspective(800px) translateZ(10px);
+}
+
+.card__four {
+  background-color: lightskyblue;
+  -webkit-transform: translate3d(0px, 0px, 0px) rotateX(51deg) rotateZ(43deg);
+          transform: translate3d(0px, 0px, 0px) rotateX(51deg) rotateZ(43deg);
+}
+
+.card__four:hover {
+  -webkit-transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
+          transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
+  -webkit-box-shadow: 1px 1px 0 1px lightskyblue, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+          box-shadow: 1px 1px 0 1px lightskyblue, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+}
+
+.card__five {
+  background-color: lightsalmon;
+  -webkit-transform: perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg) scale(0.9, 0.9);
+          transform: perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg) scale(0.9, 0.9);
+  -webkit-box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+}
+
+.card__five:hover {
+  -webkit-transform: translate3d(0px, 0px, -250px);
+          transform: translate3d(0px, 0px, -250px);
+}
+
+.pseudo, .card__six::after, .card__six::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card__six {
+  z-index: 0;
+  position: relative;
+  -webkit-transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+          transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  -webkit-transition: 0.6s ease transform;
+  transition: 0.6s ease transform;
+}
+
+.card__six:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.card__six::after {
+  background-color: lightcoral;
+  border-radius: 10px;
+  -webkit-transform: translateZ(-4rem);
+          transform: translateZ(-4rem);
+}
+
+.card__six::after:hover {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.card__six::before {
+  border: solid 5px lightskyblue;
+  border-radius: 10px;
+  -webkit-transform: translateZ(4rem);
+          transform: translateZ(4rem);
+}
+
+.card__six::before:hover {
+  -webkit-transform: translateZ(-1px);
+          transform: translateZ(-1px);
+}
+/*# sourceMappingURL=index.css.map */

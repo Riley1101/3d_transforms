@@ -1,0 +1,119 @@
+body{
+    width: 80%;
+    margin:10em auto;
+    display: grid;
+    gap: 5em;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+.card{
+    margin: auto;
+    width: 300px;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(22,31,39,0.42),;
+    transition: all 250ms ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card__one:hover{
+    transform: perspective(30em) rotateX(18deg);
+    box-shadow:
+    rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+    rgba(22, 31, 39, 0.42) 0px 30px 163px -25px,
+}
+
+.card__two:hover{
+    transform: perspective(30em) rotateY(18deg);
+    box-shadow:0px 25px 50px -12px rgba($color: #000000, $alpha: 0.2);
+}
+
+.card__three{
+    box-shadow: none;
+    background-color: coral;
+
+    &:hover{
+        box-shadow:
+        0em 0em 6em -2em rgba(0,0,0,.5),
+        0em 0em 3.5em -2.5em rgba(0,0,0,.5);
+    
+        transform: perspective(800px) translateZ(10px);
+    }
+}
+
+.card__four{
+    background-color: lightskyblue;
+    transform:
+    translate3d(0px, -0px, 0px)
+    rotateX(51deg)
+    rotateZ(43deg);
+    &:hover {
+        transform:
+          translate3d(0px, -16px, 0px)
+          rotateX(51deg)
+          rotateZ(43deg);
+        box-shadow:
+          1px 1px 0 1px lightskyblue,
+          -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+          54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+      }
+}
+
+.card__five{
+    background-color: lightsalmon;
+    transform:
+    perspective(750px)
+    translate3d(0px, 0px, -250px)
+    rotateX(27deg)
+    scale(0.9, 0.9);
+    box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+  }
+}
+
+.pseudo{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card__six{ 
+    z-index: 0;
+    position: relative;
+    transform:
+    scale(0.75) rotateY(-30deg) 
+    rotateX(45deg) translateZ(4.5rem);
+    transform-origin:50% 100%;
+    box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.25);
+    transition: 0.6s ease transform;
+
+    &:hover {
+        transform: scale(1);
+    }
+    
+    &::after{
+        @extend .pseudo;
+        background-color: lightcoral;  
+        border-radius: 10px;
+        transform: translateZ(-4rem);
+
+        &:hover {
+            transform: translateZ(0);
+          }
+    }
+    &::before{
+        @extend .pseudo;
+        border: solid 5px lightskyblue;
+        border-radius: 10px;
+        transform: translateZ(4rem);
+
+        &:hover {
+            transform: translateZ(-1px);
+        }
+
+    }
+}
